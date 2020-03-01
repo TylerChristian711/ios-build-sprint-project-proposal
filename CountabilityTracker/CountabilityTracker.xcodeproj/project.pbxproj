@@ -54,6 +54,9 @@
 		E37DC9C2240B02C500F46E65 /* CountabilityTracker */ = {
 			isa = PBXGroup;
 			children = (
+				E37DC9D9240C4DD700F46E65 /* ViewControllers */,
+				E37DC9D8240C4C7800F46E65 /* ModelController */,
+				E37DC9D7240C4C6C00F46E65 /* Model */,
 				E37DC9C3240B02C500F46E65 /* AppDelegate.swift */,
 				E37DC9C5240B02C500F46E65 /* SceneDelegate.swift */,
 				E37DC9C9240B02C500F46E65 /* Main.storyboard */,
@@ -62,6 +65,35 @@
 				E37DC9D1240B02C700F46E65 /* Info.plist */,
 			);
 			path = CountabilityTracker;
+			sourceTree = "<group>";
+		};
+		E37DC9D7240C4C6C00F46E65 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E37DC9DA240C4DE900F46E65 /* Core Data */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E37DC9D8240C4C7800F46E65 /* ModelController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ModelController;
+			sourceTree = "<group>";
+		};
+		E37DC9D9240C4DD700F46E65 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E37DC9DA240C4DE900F46E65 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Core Data";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
