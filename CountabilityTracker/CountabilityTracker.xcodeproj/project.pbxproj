@@ -12,6 +12,11 @@
 		E37DC9CB240B02C500F46E65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E37DC9C9240B02C500F46E65 /* Main.storyboard */; };
 		E37DC9CD240B02C700F46E65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E37DC9CC240B02C700F46E65 /* Assets.xcassets */; };
 		E37DC9D0240B02C700F46E65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E37DC9CE240B02C700F46E65 /* LaunchScreen.storyboard */; };
+		E37DC9DD240D5A1200F46E65 /* Entry.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E37DC9DB240D5A1200F46E65 /* Entry.xcdatamodeld */; };
+		E37DC9DF240D5B0900F46E65 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37DC9DE240D5B0900F46E65 /* CoreDataStack.swift */; };
+		E37DC9E1240D61AC00F46E65 /* EntryRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37DC9E0240D61AC00F46E65 /* EntryRepresentation.swift */; };
+		E37DC9E3240D6F6400F46E65 /* Entry+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37DC9E2240D6F6400F46E65 /* Entry+Convenience.swift */; };
+		E37DC9E5240D868500F46E65 /* Entry+Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37DC9E4240D868500F46E65 /* Entry+Encodable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		E37DC9CC240B02C700F46E65 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E37DC9CF240B02C700F46E65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E37DC9D1240B02C700F46E65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E37DC9DC240D5A1200F46E65 /* Entry.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Entry.xcdatamodel; sourceTree = "<group>"; };
+		E37DC9DE240D5B0900F46E65 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		E37DC9E0240D61AC00F46E65 /* EntryRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryRepresentation.swift; sourceTree = "<group>"; };
+		E37DC9E2240D6F6400F46E65 /* Entry+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entry+Convenience.swift"; sourceTree = "<group>"; };
+		E37DC9E4240D868500F46E65 /* Entry+Encodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entry+Encodable.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +80,9 @@
 		E37DC9D7240C4C6C00F46E65 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E37DC9E2240D6F6400F46E65 /* Entry+Convenience.swift */,
+				E37DC9E0240D61AC00F46E65 /* EntryRepresentation.swift */,
+				E37DC9E4240D868500F46E65 /* Entry+Encodable.swift */,
 				E37DC9DA240C4DE900F46E65 /* Core Data */,
 			);
 			path = Model;
@@ -92,6 +105,8 @@
 		E37DC9DA240C4DE900F46E65 /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
+				E37DC9DB240D5A1200F46E65 /* Entry.xcdatamodeld */,
+				E37DC9DE240D5B0900F46E65 /* CoreDataStack.swift */,
 			);
 			path = "Core Data";
 			sourceTree = "<group>";
@@ -167,8 +182,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E37DC9DD240D5A1200F46E65 /* Entry.xcdatamodeld in Sources */,
+				E37DC9E5240D868500F46E65 /* Entry+Encodable.swift in Sources */,
+				E37DC9E1240D61AC00F46E65 /* EntryRepresentation.swift in Sources */,
 				E37DC9C4240B02C500F46E65 /* AppDelegate.swift in Sources */,
 				E37DC9C6240B02C500F46E65 /* SceneDelegate.swift in Sources */,
+				E37DC9E3240D6F6400F46E65 /* Entry+Convenience.swift in Sources */,
+				E37DC9DF240D5B0900F46E65 /* CoreDataStack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,6 +384,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E37DC9DB240D5A1200F46E65 /* Entry.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E37DC9DC240D5A1200F46E65 /* Entry.xcdatamodel */,
+			);
+			currentVersion = E37DC9DC240D5A1200F46E65 /* Entry.xcdatamodel */;
+			path = Entry.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = E37DC9B8240B02C500F46E65 /* Project object */;
 }
