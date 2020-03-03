@@ -50,7 +50,25 @@ class CoreDataImporter {
     
     
     private func update(entry: Entry, with entryRep: EntryRepresentation) {
+        entry.title = entryRep.title
+        entry.bodytext = entryRep.bodyText
+        entry.date = entryRep.date
+        entry.identifier = entryRep.identifier
+    }
+    
+    private func fetchSingleEntryFromPersistentStore(with identifier: String?, in context: NSManagedObjectContext) -> Entry? {
+        guard let identifier = identifier else { return nil }
         
+        let fetchRequest: NSFetchRequest<Entry> = Entry.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "identifier IN %@", identifier)
+        
+        var results: Entry? = nil
+        do {
+             results = try context.fetch(fetchRequest).first
+        } catch {
+            NSLog("Error fetching single entry: \(error)")
+        }
+        return results
     }
     
 }
