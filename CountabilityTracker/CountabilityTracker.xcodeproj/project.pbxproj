@@ -19,6 +19,7 @@
 		E37DC9E5240D868500F46E65 /* Entry+Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37DC9E4240D868500F46E65 /* Entry+Encodable.swift */; };
 		E37DC9E7240EB84200F46E65 /* CoreDataImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37DC9E6240EB84200F46E65 /* CoreDataImporter.swift */; };
 		E37DC9E9240EF16800F46E65 /* EntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37DC9E8240EF16800F46E65 /* EntryController.swift */; };
+		E37DC9EB240F142900F46E65 /* DateTimeFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37DC9EA240F142900F46E65 /* DateTimeFormatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		E37DC9E4240D868500F46E65 /* Entry+Encodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entry+Encodable.swift"; sourceTree = "<group>"; };
 		E37DC9E6240EB84200F46E65 /* CoreDataImporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataImporter.swift; sourceTree = "<group>"; };
 		E37DC9E8240EF16800F46E65 /* EntryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryController.swift; sourceTree = "<group>"; };
+		E37DC9EA240F142900F46E65 /* DateTimeFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTimeFormatter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 		E37DC9C2240B02C500F46E65 /* CountabilityTracker */ = {
 			isa = PBXGroup;
 			children = (
+				E37DC9EA240F142900F46E65 /* DateTimeFormatter.swift */,
 				E37DC9D9240C4DD700F46E65 /* ViewControllers */,
 				E37DC9D8240C4C7800F46E65 /* ModelController */,
 				E37DC9D7240C4C6C00F46E65 /* Model */,
@@ -193,6 +196,7 @@
 				E37DC9E1240D61AC00F46E65 /* EntryRepresentation.swift in Sources */,
 				E37DC9E9240EF16800F46E65 /* EntryController.swift in Sources */,
 				E37DC9C4240B02C500F46E65 /* AppDelegate.swift in Sources */,
+				E37DC9EB240F142900F46E65 /* DateTimeFormatter.swift in Sources */,
 				E37DC9C6240B02C500F46E65 /* SceneDelegate.swift in Sources */,
 				E37DC9E3240D6F6400F46E65 /* Entry+Convenience.swift in Sources */,
 				E37DC9E7240EB84200F46E65 /* CoreDataImporter.swift in Sources */,
