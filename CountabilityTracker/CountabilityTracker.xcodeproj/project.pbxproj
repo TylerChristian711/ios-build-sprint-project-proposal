@@ -17,6 +17,7 @@
 		E37DC9E1240D61AC00F46E65 /* EntryRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37DC9E0240D61AC00F46E65 /* EntryRepresentation.swift */; };
 		E37DC9E3240D6F6400F46E65 /* Entry+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37DC9E2240D6F6400F46E65 /* Entry+Convenience.swift */; };
 		E37DC9E5240D868500F46E65 /* Entry+Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37DC9E4240D868500F46E65 /* Entry+Encodable.swift */; };
+		E37DC9E7240EB84200F46E65 /* CoreDataImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37DC9E6240EB84200F46E65 /* CoreDataImporter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		E37DC9E0240D61AC00F46E65 /* EntryRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryRepresentation.swift; sourceTree = "<group>"; };
 		E37DC9E2240D6F6400F46E65 /* Entry+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entry+Convenience.swift"; sourceTree = "<group>"; };
 		E37DC9E4240D868500F46E65 /* Entry+Encodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entry+Encodable.swift"; sourceTree = "<group>"; };
+		E37DC9E6240EB84200F46E65 /* CoreDataImporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataImporter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 		E37DC9D8240C4C7800F46E65 /* ModelController */ = {
 			isa = PBXGroup;
 			children = (
+				E37DC9E6240EB84200F46E65 /* CoreDataImporter.swift */,
 			);
 			path = ModelController;
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 				E37DC9C4240B02C500F46E65 /* AppDelegate.swift in Sources */,
 				E37DC9C6240B02C500F46E65 /* SceneDelegate.swift in Sources */,
 				E37DC9E3240D6F6400F46E65 /* Entry+Convenience.swift in Sources */,
+				E37DC9E7240EB84200F46E65 /* CoreDataImporter.swift in Sources */,
 				E37DC9DF240D5B0900F46E65 /* CoreDataStack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
