@@ -76,6 +76,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="ih4-Jt-pW2" kind="show" identifier="ViewEntrySegue" id="w8u-5g-vyX"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -172,4 +175,7 @@
     <resources>
         <image name="plus" catalog="system" width="64" height="56"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="w8u-5g-vyX"/>
+    </inferredMetricsTieBreakers>
 </document>

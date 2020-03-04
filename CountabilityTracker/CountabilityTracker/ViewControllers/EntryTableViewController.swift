@@ -12,7 +12,7 @@ import CoreData
 class EntryTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
     
     let entryController = EntryController()
-    let entry = Entry()
+    var entry: Entry!
     
     lazy var fetchedResultsController: NSFetchedResultsController<Entry> = {
         let fetchRequest: NSFetchRequest<Entry> = Entry.fetchRequest()
@@ -71,7 +71,7 @@ class EntryTableViewController: UITableViewController, NSFetchedResultsControlle
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "EntryCell", for: indexPath)
         cell.detailTextLabel?.text = DateTimeFormatter.formatDateStamp(for: entry)
-        cell.textLabel?.text = entry.title
+        cell.textLabel?.text = entry?.title
         
         
         
@@ -134,6 +134,20 @@ class EntryTableViewController: UITableViewController, NSFetchedResultsControlle
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "AddEntrySegue":
+            guard let destinationVC = segue.destination as? EntryDetialViewController else { return }
+            destinationVC.entryController = entryController
+            
+        case "ViewEntrySegue":
+            guard let destinationVC = segue.destination as? EntryDetialViewController,
+                let indexPath = tableView.indexPathForSelectedRow else { return }
+            destinationVC.entry = fetchedResultsController.object(at: indexPath)
+            destinationVC.entryController = entryController
+            
+        default:
+            break
+        }
         
     }
     
