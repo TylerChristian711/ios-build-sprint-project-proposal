@@ -20,6 +20,9 @@
 		E37DC9E7240EB84200F46E65 /* CoreDataImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37DC9E6240EB84200F46E65 /* CoreDataImporter.swift */; };
 		E37DC9E9240EF16800F46E65 /* EntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37DC9E8240EF16800F46E65 /* EntryController.swift */; };
 		E37DC9EB240F142900F46E65 /* DateTimeFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37DC9EA240F142900F46E65 /* DateTimeFormatter.swift */; };
+		E37DC9ED240F1FAD00F46E65 /* EntryDetialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37DC9EC240F1FAD00F46E65 /* EntryDetialViewController.swift */; };
+		E37DC9EF240F1FBD00F46E65 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37DC9EE240F1FBD00F46E65 /* SettingsViewController.swift */; };
+		E37DC9F1240F1FD000F46E65 /* EntryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37DC9F0240F1FD000F46E65 /* EntryTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +41,9 @@
 		E37DC9E6240EB84200F46E65 /* CoreDataImporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataImporter.swift; sourceTree = "<group>"; };
 		E37DC9E8240EF16800F46E65 /* EntryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryController.swift; sourceTree = "<group>"; };
 		E37DC9EA240F142900F46E65 /* DateTimeFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTimeFormatter.swift; sourceTree = "<group>"; };
+		E37DC9EC240F1FAD00F46E65 /* EntryDetialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryDetialViewController.swift; sourceTree = "<group>"; };
+		E37DC9EE240F1FBD00F46E65 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		E37DC9F0240F1FD000F46E65 /* EntryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +113,9 @@
 		E37DC9D9240C4DD700F46E65 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				E37DC9EC240F1FAD00F46E65 /* EntryDetialViewController.swift */,
+				E37DC9EE240F1FBD00F46E65 /* SettingsViewController.swift */,
+				E37DC9F0240F1FD000F46E65 /* EntryTableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -193,14 +202,17 @@
 			files = (
 				E37DC9DD240D5A1200F46E65 /* Entry.xcdatamodeld in Sources */,
 				E37DC9E5240D868500F46E65 /* Entry+Encodable.swift in Sources */,
+				E37DC9F1240F1FD000F46E65 /* EntryTableViewController.swift in Sources */,
 				E37DC9E1240D61AC00F46E65 /* EntryRepresentation.swift in Sources */,
 				E37DC9E9240EF16800F46E65 /* EntryController.swift in Sources */,
 				E37DC9C4240B02C500F46E65 /* AppDelegate.swift in Sources */,
 				E37DC9EB240F142900F46E65 /* DateTimeFormatter.swift in Sources */,
 				E37DC9C6240B02C500F46E65 /* SceneDelegate.swift in Sources */,
+				E37DC9ED240F1FAD00F46E65 /* EntryDetialViewController.swift in Sources */,
 				E37DC9E3240D6F6400F46E65 /* Entry+Convenience.swift in Sources */,
 				E37DC9E7240EB84200F46E65 /* CoreDataImporter.swift in Sources */,
 				E37DC9DF240D5B0900F46E65 /* CoreDataStack.swift in Sources */,
+				E37DC9EF240F1FBD00F46E65 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

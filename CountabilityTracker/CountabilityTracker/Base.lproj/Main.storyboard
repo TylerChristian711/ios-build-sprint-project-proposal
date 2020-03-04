@@ -10,7 +10,7 @@
         <!--Settings-->
         <scene sceneID="t5f-KK-lRD">
             <objects>
-                <viewController id="hY2-zs-akv" sceneMemberID="viewController">
+                <viewController id="hY2-zs-akv" customClass="SettingsViewController" customModule="CountabilityTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pst-Ow-PF2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -44,16 +44,16 @@
             </objects>
             <point key="canvasLocation" x="3496" y="913"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Entry Table View Controller-->
         <scene sceneID="Zyi-jh-1Du">
             <objects>
-                <tableViewController id="Csc-OV-OCk" sceneMemberID="viewController">
+                <tableViewController id="Csc-OV-OCk" customClass="EntryTableViewController" customModule="CountabilityTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="B02-HR-T0B">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="v7E-b5-zfT" detailTextLabel="Kgs-us-Iyy" rowHeight="60" style="IBUITableViewCellStyleSubtitle" id="Ubd-k8-EUF">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="EntryCell" textLabel="v7E-b5-zfT" detailTextLabel="Kgs-us-Iyy" rowHeight="60" style="IBUITableViewCellStyleSubtitle" id="Ubd-k8-EUF">
                                 <rect key="frame" x="0.0" y="28" width="414" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ubd-k8-EUF" id="AYu-HS-zZo">
@@ -100,10 +100,10 @@
             </objects>
             <point key="canvasLocation" x="3496" y="210"/>
         </scene>
-        <!--View Controller-->
+        <!--Entry Detial View Controller-->
         <scene sceneID="qQY-lB-2tI">
             <objects>
-                <viewController id="ih4-Jt-pW2" sceneMemberID="viewController">
+                <viewController id="ih4-Jt-pW2" customClass="EntryDetialViewController" customModule="CountabilityTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="a9g-93-rBH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -135,8 +135,16 @@
                         <viewLayoutGuide key="safeArea" id="Pmy-Ri-xmJ"/>
                     </view>
                     <navigationItem key="navigationItem" id="TKf-Sx-blD">
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="M8n-Q6-d5H"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="M8n-Q6-d5H">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="ih4-Jt-pW2" id="Lea-6z-Xmb"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="bodyTextView" destination="6ua-oq-rQi" id="jLC-OH-Wg0"/>
+                        <outlet property="titleTextField" destination="hbt-sI-aYb" id="gXp-IB-0Gm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1sB-8A-zTC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
