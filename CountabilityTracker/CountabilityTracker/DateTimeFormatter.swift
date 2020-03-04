@@ -16,7 +16,7 @@ class DateTimeFormatter {
     
     static let dateFormatter: DateFormatter = {
        let formatter = DateFormatter()
-        formatter.timeStyle = .none
+        formatter.timeStyle = .short
         formatter.dateStyle = .medium
         return formatter
     }()

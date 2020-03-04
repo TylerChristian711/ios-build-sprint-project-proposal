@@ -23,6 +23,7 @@
 		E37DC9ED240F1FAD00F46E65 /* EntryDetialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37DC9EC240F1FAD00F46E65 /* EntryDetialViewController.swift */; };
 		E37DC9EF240F1FBD00F46E65 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37DC9EE240F1FBD00F46E65 /* SettingsViewController.swift */; };
 		E37DC9F1240F1FD000F46E65 /* EntryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37DC9F0240F1FD000F46E65 /* EntryTableViewController.swift */; };
+		E37DC9F324101AD700F46E65 /* EntryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37DC9F224101AD700F46E65 /* EntryTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		E37DC9EC240F1FAD00F46E65 /* EntryDetialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryDetialViewController.swift; sourceTree = "<group>"; };
 		E37DC9EE240F1FBD00F46E65 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		E37DC9F0240F1FD000F46E65 /* EntryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryTableViewController.swift; sourceTree = "<group>"; };
+		E37DC9F224101AD700F46E65 /* EntryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				E37DC9EC240F1FAD00F46E65 /* EntryDetialViewController.swift */,
 				E37DC9EE240F1FBD00F46E65 /* SettingsViewController.swift */,
 				E37DC9F0240F1FD000F46E65 /* EntryTableViewController.swift */,
+				E37DC9F224101AD700F46E65 /* EntryTableViewCell.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 				E37DC9C6240B02C500F46E65 /* SceneDelegate.swift in Sources */,
 				E37DC9ED240F1FAD00F46E65 /* EntryDetialViewController.swift in Sources */,
 				E37DC9E3240D6F6400F46E65 /* Entry+Convenience.swift in Sources */,
+				E37DC9F324101AD700F46E65 /* EntryTableViewCell.swift in Sources */,
 				E37DC9E7240EB84200F46E65 /* CoreDataImporter.swift in Sources */,
 				E37DC9DF240D5B0900F46E65 /* CoreDataStack.swift in Sources */,
 				E37DC9EF240F1FBD00F46E65 /* SettingsViewController.swift in Sources */,
