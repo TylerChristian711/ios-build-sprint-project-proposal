@@ -6,47 +6,46 @@
 //  Copyright © 2020 Lambda_School_Loaner_218. All rights reserved.
 //
 //
-//import UIKit
-//import UserNotifications
-//
-//class SettingsViewController: UIViewController {
-//    
-//    @IBOutlet weak var timeReminder: UIDatePicker!
-//    
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//    }
-//
-////    func notification() {
-////        let content = UNMutableNotificationContent()
-////        content.title = "CountAbilityTracker"
-////        content.body = "Time to reflect on the day!"
-////        content.sound = .default
-////
-////        let gregorian = Calendar(identifier: .gregorian)
-////        let now = Date()
-////        var components = gregorian.dateComponents([.year, .month, .day, .hour, .minute, .second], from: now)
-////
-////        components.hour = 7
-////        components.minute = 30
-////        components.second = 0
-////
-////        let date = gregorian.date(from: components)!
-////
-////        let triggerDaily = Calendar.current.dateComponents([.hour,.minute,.second], from: date)
-////        let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDaily, repeats: true)
-////
-////        let identifier = "UYLLocalNotification"
-////        let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
-////
-////
-////        UNUserNotificationCenter.current().add(request) { (error) in
-////            if let error = error {
-////                print("Something is wrong most liekly on line 40 and 39: \(error.localizedDescription)")
-////            }
-////        }
-//    }
-//    
-//    
-//
-//}
+import UIKit
+import UserNotifications
+
+class SettingsViewController: UIViewController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    func setNotifications() {
+        let center = UNUserNotificationCenter.current()
+        center.requestAuthorization(options: [.alert,.badge,.sound]) { (granted, error) in
+            if granted {
+                print("User has granted permission")
+            } else {
+                print("User has NOT granted permission")
+            }
+        }
+        
+        let content = UNMutableNotificationContent()
+        content.title = "Journal Alert"
+        content.body = "Don't forget you need to write down what happend today"
+        content.categoryIdentifier = "alarm"
+        content.userInfo = ["customData":"Entry"]
+        content.sound = UNNotificationSound.default
+        
+        var dateComponents = DateComponents()
+        dateComponents.hour = 1
+        dateComponents.minute = 15
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: true)
+        
+        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+        center.add(request)
+        
+    }
+    
+    
+    
+}
+
+
+
+
