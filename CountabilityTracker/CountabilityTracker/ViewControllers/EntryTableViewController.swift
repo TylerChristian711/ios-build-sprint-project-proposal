@@ -13,7 +13,7 @@ import UserNotifications
 class EntryTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
     
     let entryController = EntryController()
-//    let settings = SettingsViewController()
+    //let settings = SettingsViewController()
     
     
     lazy var fetchedResultsController: NSFetchedResultsController<Entry> = {
@@ -41,7 +41,7 @@ class EntryTableViewController: UITableViewController, NSFetchedResultsControlle
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(refresh(_:)), for: .valueChanged)
         self.refreshControl = refreshControl
-
+       // settings.setNotifications()
 //
 //        let content = UNMutableNotificationContent()
 //        content.title = "CountAbilityTracker"

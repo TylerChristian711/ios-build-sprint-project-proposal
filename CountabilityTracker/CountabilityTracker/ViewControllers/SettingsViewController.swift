@@ -34,7 +34,7 @@ class SettingsViewController: UIViewController {
         
         var dateComponents = DateComponents()
         dateComponents.hour = 1
-        dateComponents.minute = 15
+        dateComponents.minute = 46
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: true)
         
         let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
