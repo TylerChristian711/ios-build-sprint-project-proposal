@@ -12,6 +12,7 @@ import CoreData
 class EntryTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
     
     let entryController = EntryController()
+//    let settings = SettingsViewController()
     
     
     lazy var fetchedResultsController: NSFetchedResultsController<Entry> = {
@@ -39,6 +40,38 @@ class EntryTableViewController: UITableViewController, NSFetchedResultsControlle
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(refresh(_:)), for: .valueChanged)
         self.refreshControl = refreshControl
+//        SettingsViewController.notification(SettingsViewController)
+        
+        let content = UNMutableNotificationContent()
+        content.title = "CountAbilityTracker"
+        content.body = "Time to reflect on the day!"
+        content.sound = .default
+        
+        let gregorian = Calendar(identifier: .gregorian)
+        let now = Date()
+        var components = gregorian.dateComponents([.year, .month, .day, .hour, .minute, .second], from: now)
+        
+        components.hour = 7
+        components.minute = 55
+        components.second = 0
+        
+        let date = gregorian.date(from: components)!
+        
+        let triggerDaily = Calendar.current.dateComponents([.hour,.minute,.second], from: date)
+        let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDaily, repeats: true)
+        
+        let identifier = "UYLLocalNotification"
+        let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
+        
+        
+        UNUserNotificationCenter.current().add(request) { (error) in
+            if let error = error {
+                print("Something is wrong most liekly on line 40 and 39: \(error.localizedDescription)")
+                     print("The time is 7:45")
+            }
+            
+        }
+        
         
         refresh(nil)
     }
