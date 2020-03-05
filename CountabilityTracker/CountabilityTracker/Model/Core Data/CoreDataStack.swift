@@ -15,7 +15,7 @@ class CoreDataStack {
     
     let container: NSPersistentContainer = {
         
-        let container = NSPersistentContainer(name: "CountabilityTracker" as String)
+        let container = NSPersistentContainer(name: "Entry" as String)
         container.loadPersistentStores { (storeDescription, error) in
             if let error = error as NSError? {
                 fatalError("Unresolved error \(error), \(error.userInfo)")

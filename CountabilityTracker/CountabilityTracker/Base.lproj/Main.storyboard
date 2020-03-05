@@ -39,6 +39,9 @@
                     <navigationItem key="navigationItem" title="Settings" id="Sf5-MQ-Ihb">
                         <barButtonItem key="rightBarButtonItem" title="Save" id="KuJ-EE-crG"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="timeReminder" destination="uK1-lb-EBm" id="4bM-8d-ggE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hdT-NV-t3K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

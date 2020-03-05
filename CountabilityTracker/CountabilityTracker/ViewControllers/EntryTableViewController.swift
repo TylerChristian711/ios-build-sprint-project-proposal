@@ -19,7 +19,7 @@ class EntryTableViewController: UITableViewController, NSFetchedResultsControlle
         fetchRequest.sortDescriptors = [NSSortDescriptor(key: "date", ascending: false)]
         
         let moc = CoreDataStack.shared.mainContext
-        let frc = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: moc, sectionNameKeyPath: "date", cacheName: nil)
+        let frc = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: moc, sectionNameKeyPath: nil, cacheName: nil)
         
         frc.delegate = self
         
@@ -31,7 +31,7 @@ class EntryTableViewController: UITableViewController, NSFetchedResultsControlle
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        tableView.reloadData()
+        
     }
     
     override func viewDidLoad() {
