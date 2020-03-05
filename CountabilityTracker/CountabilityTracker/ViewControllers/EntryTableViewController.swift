@@ -13,7 +13,8 @@ import UserNotifications
 class EntryTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
     
     let entryController = EntryController()
-    //let settings = SettingsViewController()
+    let center = UNUserNotificationCenter.current()
+    
     
     
     lazy var fetchedResultsController: NSFetchedResultsController<Entry> = {
@@ -41,40 +42,47 @@ class EntryTableViewController: UITableViewController, NSFetchedResultsControlle
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(refresh(_:)), for: .valueChanged)
         self.refreshControl = refreshControl
-       // settings.setNotifications()
-//
-//        let content = UNMutableNotificationContent()
-//        content.title = "CountAbilityTracker"
-//        content.body = "Time to reflect on the day!"
-//        content.sound = .default
-//
-//        let gregorian = Calendar(identifier: .gregorian)
-//        let now = Date()
-//        var components = gregorian.dateComponents([.year, .month, .day, .hour, .minute, .second], from: now)
-//
-//        components.hour = 10
-//        components.minute = 50
-//        components.second = 0
-//
-//        let date = gregorian.date(from: components)!
-//
-//        let triggerDaily = Calendar.current.dateComponents([.hour,.minute,.second], from: date)
-//        let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDaily, repeats: true)
-//
-//        let identifier = "UYLLocalNotification"
-//        let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
-//
-//
-//        UNUserNotificationCenter.current().add(request) { (error) in
-//            if let error = error {
-//                print("Something is wrong most liekly on line 40 and 39: \(error.localizedDescription)")
-//                     print("The time is 7:45")
-//            }
-//
-//        }
+       
         
-        
+        setNotifications()
         refresh(nil)
+        
+        // MARK: - print out scheduled notifications at scene load
+                center.getPendingNotificationRequests { requests in
+                    for request in requests {
+                        print(request)
+                    }
+                }
+    }
+    
+    
+    
+    func setNotifications() {
+        let center = UNUserNotificationCenter.current()
+        center.requestAuthorization(options: [.alert,.badge,.sound]) { (granted, error) in
+            if granted {
+                print("User has granted permission")
+            } else {
+                print("User has NOT granted permission")
+            }
+        }
+        
+        let content = UNMutableNotificationContent()
+        content.title = "Journal Alert"
+        content.body = "Don't forget you need to write down what happend today"
+        content.categoryIdentifier = "alarm"
+        content.userInfo = ["customData":"Entry"]
+        content.sound = UNNotificationSound.default
+        
+        var dateComponents = DateComponents()
+        dateComponents.hour = 16
+        dateComponents.minute = 24
+        //let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 60, repeats: true)
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
+        
+        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+        center.add(request)
+        
     }
     
     @IBAction func refresh(_ sender: Any?) {
