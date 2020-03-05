@@ -16,13 +16,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a time to remind you to write" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V9K-Pp-qgL">
-                                <rect key="frame" x="60" y="238" width="294" height="21"/>
+                                <rect key="frame" x="60" y="194" width="294" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="5" translatesAutoresizingMaskIntoConstraints="NO" id="uK1-lb-EBm">
-                                <rect key="frame" x="0.0" y="267" width="414" height="216"/>
+                                <rect key="frame" x="0.0" y="223" width="414" height="216"/>
                             </datePicker>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -92,11 +92,6 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="wIC-h2-X1L">
-                        <barButtonItem key="leftBarButtonItem" title="Settings" id="t4w-Tn-CjS">
-                            <connections>
-                                <segue destination="hY2-zs-akv" kind="show" identifier="ShowSettingSegue" id="FHV-wj-E67"/>
-                            </connections>
-                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="e71-8z-ewH">
                             <connections>
                                 <segue destination="ih4-Jt-pW2" kind="show" identifier="AddEntrySegue" id="LgW-dk-Tgd"/>

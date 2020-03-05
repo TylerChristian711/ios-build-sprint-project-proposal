@@ -76,7 +76,7 @@ class EntryTableViewController: UITableViewController, NSFetchedResultsControlle
         
         var dateComponents = DateComponents()
         dateComponents.hour = 16
-        dateComponents.minute = 24
+        dateComponents.minute = 53
         //let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 60, repeats: true)
         let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
         
